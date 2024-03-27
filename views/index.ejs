@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./head'); %>
+</head>
+
+<body class="container">
+
+    <main>
+        <div class="jumbotron">
+            <ul>
+                <% messages.forEach(function(message) { %>
+                    <li>
+                        <strong>
+                            <%= message.user %> posted on <%= message.added %>
+                        </strong>
+                        <%= message.text %>
+                    </li>
+                    <% }); %>
+            </ul>
+        </div>
+    </main>
+
+</body>
+
+</html>
